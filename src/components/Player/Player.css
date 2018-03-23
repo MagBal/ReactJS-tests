@@ -1,0 +1,50 @@
+.Player {
+	background-color: #FFF;
+	padding: 10px 20px;
+	border-bottom: 2px solid #000;
+	position: relative;
+}
+
+.Player__button--remove {
+	color: #fff;
+	background-color: #000;
+	border: 1px solid #000;
+	transition: .3s;
+}
+
+.Player__button--remove:hover {
+	background-color: #FFF;
+	border: 2px solid #000;
+	color: #000;
+}
+
+.Player__name {
+	margin-left: 40px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.Player__score {
+	position: absolute;
+	left: 230px;
+	color: #0000ff;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.Player__button--plus, .Player__button--minus {
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	float: right;
+	transition: easy-in .3s;
+}
+
+.Player__button--plus {
+	margin-left: 20px;
+}
+
+.Player__button--plus:hover, .Player__button--minus:hover {
+	color: #0000ff;
+}
