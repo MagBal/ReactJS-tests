@@ -1,21 +1,23 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import AddPlayer from './AddPlayer';
+import React from "react";
+import { shallow } from "enzyme";
+import AddPlayer from "./AddPlayer";
 
-it('renders without crashing', () => {
+it("renders without crashing", () => {
   shallow(<AddPlayer />);
 });
 
-it('onPlayerAdd will be called with the right name', () => {
+it("onPlayerAdd will be called with the right name", () => {
   const onPlayerAdd = jest.fn();
   const addPlayerComponent = mount(<AddPlayer onPlayerAdd={onPlayerAdd} />);
-  const nameInput = addPlayerComponent.find('input').first().getDOMNode();
+  const nameInput = addPlayerComponent
+    .find("input")
+    .first()
+    .getDOMNode();
 
-  nameInput.value = 'Ania';
+  nameInput.value = "Ania";
 
-  const form = addPlayerComponent.find('form');
-  form.simulate('submit');
+  const form = addPlayerComponent.find("form");
+  form.simulate("submit");
 
-  expect(onPlayerAdd).toBeCalledWith('Ania');
-
-})
+  expect(onPlayerAdd).toBeCalledWith("Ania");
+});
